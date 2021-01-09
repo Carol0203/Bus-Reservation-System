@@ -103,7 +103,7 @@ public class DatabaseConnectionSql {
 		 * @return
 		 */
 		// ÔöÉ¾ĞŞ¸Ä
-	    public int add(String sql, String str[]) {
+	    public static int add(String sql, String str[]) {
 	        int a = 0;
 	        try {
 	        	getConnection();

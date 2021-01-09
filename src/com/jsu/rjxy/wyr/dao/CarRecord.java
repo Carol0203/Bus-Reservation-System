@@ -1,5 +1,6 @@
 package com.jsu.rjxy.wyr.dao;
 
+import org.junit.Test;
 
 public class CarRecord {
     private String carnumber;

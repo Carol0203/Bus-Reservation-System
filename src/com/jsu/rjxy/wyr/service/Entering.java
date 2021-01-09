@@ -113,7 +113,7 @@ public class Entering extends JFrame {
 				String sql = "insert into selecting (carnumber,start,destination,time,price,ticket) values(?,?,?,?,?,?)";
 				new DatabaseConnectionSql().add(sql, str);
 				JOptionPane.showMessageDialog(null, "录入成功！");
-				File file = new File("D:\\用户信息.txt"); 
+				File file = new File("D:\\汽车信息.txt"); 
 				Writer out=null;
 				try {
 					out=new FileWriter(file,true);

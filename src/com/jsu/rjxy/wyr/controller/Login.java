@@ -2,7 +2,6 @@ package com.jsu.rjxy.wyr.controller;
 
 import java.awt.EventQueue;
 import java.awt.Graphics;
-import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

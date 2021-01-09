@@ -6,12 +6,16 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import com.jsu.rjxy.wyr.dao.DatabaseToExcel;
+import com.jsu.rjxy.wyr.dao.ExcelToDatabase;
 import com.jsu.rjxy.wyr.service.Deleting;
 import com.jsu.rjxy.wyr.service.Entering;
 import com.jsu.rjxy.wyr.service.Selecting;
 import com.jsu.rjxy.wyr.service.Updating;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Graphics;
 
@@ -49,7 +53,7 @@ public class Administrator1 extends JFrame {
 	public Administrator1() {
 		setTitle("\u8F66\u7968\u7BA1\u7406");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(390, 170, 685, 425);
+		setBounds(390, 170, 638, 433);
 		contentPane = new JPanel(){//重写paint的一个方法绘制背景图片
             @Override
             protected void paintComponent(Graphics g) {
@@ -78,7 +82,7 @@ public class Administrator1 extends JFrame {
 			}
 		});
 		btnNewButton.setFont(new Font("宋体", Font.PLAIN, 20));
-		btnNewButton.setBounds(25, 173, 119, 52);
+		btnNewButton.setBounds(38, 149, 89, 39);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("\u67E5\u8BE2");
@@ -89,7 +93,7 @@ public class Administrator1 extends JFrame {
 			}
 		});
 		btnNewButton_1.setFont(new Font("宋体", Font.PLAIN, 20));
-		btnNewButton_1.setBounds(199, 173, 119, 52);
+		btnNewButton_1.setBounds(189, 149, 89, 39);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("\u5220\u9664");
@@ -100,7 +104,7 @@ public class Administrator1 extends JFrame {
 			}
 		});
 		btnNewButton_2.setFont(new Font("宋体", Font.PLAIN, 20));
-		btnNewButton_2.setBounds(370, 173, 119, 52);
+		btnNewButton_2.setBounds(341, 149, 89, 39);
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("\u4FEE\u6539");
@@ -111,7 +115,7 @@ public class Administrator1 extends JFrame {
 			}
 		});
 		btnNewButton_3.setFont(new Font("宋体", Font.PLAIN, 20));
-		btnNewButton_3.setBounds(534, 173, 119, 52);
+		btnNewButton_3.setBounds(490, 149, 89, 39);
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton_4 = new JButton("\u8FD4\u56DE");
@@ -121,7 +125,29 @@ public class Administrator1 extends JFrame {
 			}
 		});
 		btnNewButton_4.setFont(new Font("宋体", Font.PLAIN, 20));
-		btnNewButton_4.setBounds(526, 330, 112, 39);
+		btnNewButton_4.setBounds(480, 333, 99, 39);
 		contentPane.add(btnNewButton_4);
+		
+		JButton btnNewButton_3_1 = new JButton("\u5BFC\u51FA\u6570\u636E\u5230Excel");
+		btnNewButton_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DatabaseToExcel.main(null);
+				JOptionPane.showMessageDialog(null, "已导出数据到Excel！");
+			}
+		});
+		btnNewButton_3_1.setFont(new Font("宋体", Font.PLAIN, 20));
+		btnNewButton_3_1.setBounds(80, 241, 198, 39);
+		contentPane.add(btnNewButton_3_1);
+		
+		JButton btnNewButton_3_2 = new JButton("\u5BFC\u5165Excel\u6587\u4EF6");
+		btnNewButton_3_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ExcelToDatabase.main(null);
+				JOptionPane.showMessageDialog(null, "已导入Excel文件！");
+			}
+		});
+		btnNewButton_3_2.setFont(new Font("宋体", Font.PLAIN, 20));
+		btnNewButton_3_2.setBounds(341, 241, 172, 39);
+		contentPane.add(btnNewButton_3_2);
 	}
 }

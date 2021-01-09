@@ -70,7 +70,6 @@ public class DatabaseToExcel {
     		excelBook.write();
     		//关闭Excel工作薄对象
     		excelBook.close();
-    		System.out.println("close");
     	}
     	 catch (Exception e) {
              e.printStackTrace();
